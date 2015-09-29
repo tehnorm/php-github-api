@@ -50,6 +50,14 @@ The last parameter of this call, Pull Request ID.
 
 The ``$pullRequest`` array contains the same elements as every entry in the result of a ``all()`` call, plus a "discussion" key, self-explanatory.
 
+#### List commits for a pull request 
+
+```php
+<?php
+
+$openPullRequests = $client->api('pull_request')->commits('ezsystems', 'ezpublish', 15);
+```
+
 ### Create a pull request
 
 A pull request can either be created by supplying both the Title & Body, OR an Issue ID.
